@@ -7,8 +7,8 @@ on:
 env:
   AWS_REGION: ap-south-1
   ECR_REPOSITORY: html-site
-  ECS_CLUSTER: html-app-cluster
-  ECS_SERVICE: html-app-service
+  ECS_CLUSTER: html-cluster
+  ECS_SERVICE: html-site-service
   CONTAINER_NAME: html-app-container
 
 jobs:
@@ -39,7 +39,7 @@ jobs:
         docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
         
 
-        
+
     - name: Update ECS service
       run: |
         aws ecs update-service \
