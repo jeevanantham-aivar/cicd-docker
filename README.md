@@ -278,6 +278,9 @@ Your AWS credentials need the following permissions:
 - Regularly update base images for security patches
 - Enable CloudTrail for API call logging
 
+
+
+
 ## License
 
 This project is open source and available under the MIT License. 
